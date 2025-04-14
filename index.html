@@ -25,9 +25,9 @@
             <li class="mt-auto px-3">
                 <a href="profile.html">
                     <div class="d-flex align-items-center px-2 py-4">
-                        <img src="./profiles/profile.png" class="rounded-circle me-2 user-avatar" alt="Avatar">
+                        <img id="profileSidebar1" class="rounded-circle me-2 user-avatar" alt="Avatar">
                         <div class="text-white">
-                            <small class="text-light">User</small>
+                            <small class="text-light" id="log_user" style="font-size: 0.75rem;">User</small>
                         </div>
                     </div>
                 </a>
@@ -44,13 +44,34 @@
             <ul class="navbar-nav">
                 <li class="nav-item">
                     <a class="nav-link" href="index.html"><i class="fa-solid fa-chart-line"></i> Dashboard</a>
-                    <a class="nav-link" href="profile.html"><i class="fa-solid fa-chart-line"></i>Profile</a>
+                    <a class="nav-link" href="profile.html"><i class="fa-solid fa-user"></i>Profile</a>
                 </li>
             </ul>
         </div>
     </nav>
 
     <div class="content">
+
+        <div class="dashboard-card clock text-center" id="digitalClock">Loading...</div>
+
+        <div class="dashboard-analytics">
+            <div class="dashboard-card">
+                <div class="count" id="student_count">0</div>
+                <div class="icon"><i class="fa-solid fa-user"></i></div>
+                <div class="label">Total Students</div>
+            </div>
+            <div class="dashboard-card">
+                <div class="count" id="active_session">300</div>
+                <div class="icon"><i class="fa-solid fa-chart-simple"></i></div>
+                <div class="label">Active Session</div>
+            </div>
+            <div class="dashboard-card">
+                <div class="count" id="system_health">...</div>
+                <div class="icon"><i class="fa-solid fa-gear"></i></div>
+                <div class="label">System Health</div>
+            </div>
+        </div>
+
         <div class="dashboard-header">
             <h4>Dashboard</h4>
 
@@ -63,7 +84,6 @@
             </div>
         </div>
 
-        <div class="clock text-center" id="digitalClock">Loading...</div>
 
         <div class="">
             <table class="table table-bordered table-hover">
@@ -80,7 +100,6 @@
                         <th scope="col">Address</th>
                         <th scope="col">Age</th>
                         <th scope="col">Status</th>
-                        <th scope="col"></th>
                     </tr>
                 </thead>
                 <tbody id="tableBody">
@@ -90,7 +109,7 @@
                             <td>
                                 <div class="avatar">
                                     <div class="avatar">
-                                        <img src="your-image.jpg" alt="Avatar" class="img-fluid rounded-circle tdImg"
+                                        <img alt="Avatar" class="img-fluid rounded-circle tdImg"
                                             style="width: 32px; height: 32px; object-fit: cover;">
                                     </div>
 
@@ -107,15 +126,6 @@
                             <td class="trStatus">
                                 <span class="badge text-bg-secondary">New</span>
                             </td>
-
-                            <td class="trAction">
-                                <button class="editBtn btn btn-secondary btn-sm">
-                                    <i class="fa-solid fa-pen-to-square"></i>
-                                </button>
-                                <button class="deleteBtn btn btn-danger btn-sm">
-                                    <i class="fa-solid fa-trash"></i>
-                                </button>
-                            </td>
                         </tr>
                     </template>
                 </tbody>
@@ -128,7 +138,8 @@
         crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.7.1.js"
         integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
-    <script src="script.js"></script>
+
+    <script src="script.js" defer></script>
 </body>
 
 </html>
