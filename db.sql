@@ -15,3 +15,19 @@ CREATE TABLE `students_table` (
   `date_created` TIMESTAMP NOT NULL DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`student_id`)
 )
+
+CREATE TABLE `students_table` (
+  `assign_id` int(11) NOT NULL PRIMARY KEY,
+  `student_name` varchar(255) NOT NULL,
+  `school` varchar(255) NOT NULL,
+  `school_address` varchar(255) NOT NULL,
+  `email` VARCHAR(100) NOT NULL UNIQUE,
+  `user_password` VARCHAR(255) NOT NULL
+  `contact` varchar(20) NOT NULL,
+  `coordinator` varchar(255) NOT NULL,
+  `organization` varchar(255) NOT NULL,
+  `date_created` date NOT NULL,
+  `profile_url` varchar(255) NOT NULL
+  `verification_code` VARCHAR(10) DEFAULT NULL,
+  `is_verified` TINYINT(1) NOT NULL DEFAULT 0,
+)
